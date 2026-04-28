@@ -39,6 +39,26 @@ nav {
   border-bottom: 1px solid rgba(196,184,154,0.3);
 }
 
+.nav-mobile-cta {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  nav { padding: 1rem 1.5rem; }
+  .nav-links { display: none; }
+  .nav-mobile-cta {
+    display: inline-block;
+    padding: 0.5rem 1.1rem;
+    background: var(--sea);
+    color: var(--white) !important;
+    text-decoration: none;
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    border-radius: 2px;
+  }
+}
+
 .nav-logo {
   font-family: 'EB Garamond', serif;
   font-size: 1.35rem;
@@ -750,6 +770,13 @@ h3 {
 }
 
 .form-submit:hover { background: var(--sea-light); }
+
+.form-consent {
+  font-size: 0.75rem;
+  color: var(--ink-light);
+  line-height: 1.6;
+  margin-top: 0.5rem;
+}
 
 /* FOOTER */
 footer {
