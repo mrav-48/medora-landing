@@ -6,7 +6,7 @@
 <title>Medora — Retreats, Camps & Brand Stays</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles-final.css">
 </head>
 <body>
 
@@ -20,6 +20,7 @@
     <li><a href="#why">Why Medora</a></li>
     <li><a href="#contact" class="nav-cta">Get a Proposal</a></li>
   </ul>
+  <a href="#contact" class="nav-mobile-cta">Get a Proposal</a>
 </nav>
 
 <!-- HERO -->
@@ -44,7 +45,7 @@
   <div class="hero-content">
     <p class="hero-eyebrow">Makarska Riviera · Dalmatia · Croatia</p>
     <h1>Host your program<br>on the <em>Makarska Riviera.</em></h1>
-    <p class="hero-sub">A venue for retreats, brand stays and group programs.<br><br>Medora Auri Hotel & Medora Orbis Camp<br>A beachfront hotel and premium campsite in Podgora.</p>
+    <p class="hero-sub">A venue for retreats, brand stays and group programs.<br><br><strong>Medora Auri Hotel & Medora Orbis Camp</strong><br>A beachfront hotel and premium campsite in Podgora.</p>
     <div class="hero-actions">
       <a href="#contact" class="btn-primary">Get a Proposal</a>
       <a href="#properties" class="btn-outline">Explore the venues</a>
@@ -410,25 +411,25 @@
       </ul>
     </div>
     <div>
-      <form class="contact-form" onsubmit="return false;">
+      <form class="contact-form" action="https://formspree.io/f/meevbwny" method="POST">
         <div class="form-row">
           <div class="form-group">
             <label for="name">Name</label>
-            <input type="text" id="name" placeholder="Your name">
+            <input type="text" id="name" name="name" placeholder="Your name" required>
           </div>
           <div class="form-group">
             <label for="org">Organisation</label>
-            <input type="text" id="org" placeholder="Company or agency">
+            <input type="text" id="org" name="organisation" placeholder="Company or agency">
           </div>
         </div>
         <div class="form-group">
           <label for="email">Email</label>
-          <input type="email" id="email" placeholder="your@email.com">
+          <input type="email" id="email" name="email" placeholder="your@email.com" required>
         </div>
         <div class="form-row">
           <div class="form-group">
             <label for="type">Program Type</label>
-            <select id="type">
+            <select id="type" name="program_type">
               <option value="">Select a type</option>
               <option>Creator / Brand Stay</option>
               <option>Wellness & Yoga Retreat</option>
@@ -439,18 +440,19 @@
           </div>
           <div class="form-group">
             <label for="size">Group Size</label>
-            <input type="text" id="size" placeholder="Approx. number of people">
+            <input type="text" id="size" name="group_size" placeholder="Approx. number of people">
           </div>
         </div>
         <div class="form-group">
           <label for="dates">Preferred Dates</label>
-          <input type="text" id="dates" placeholder="e.g. April–May 2025, flexible">
+          <input type="text" id="dates" name="preferred_dates" placeholder="e.g. April–May 2025, flexible">
         </div>
         <div class="form-group">
           <label for="message">Program Details</label>
-          <textarea id="message" placeholder="Brief description of what you're planning. We'll take it from there."></textarea>
+          <textarea id="message" name="message" placeholder="Brief description of what you're planning. We'll take it from there."></textarea>
         </div>
         <button type="submit" class="form-submit">Request a Proposal</button>
+        <p class="form-consent">By submitting this form, you agree to be contacted by Medora Hotels & Resorts regarding your enquiry. Your information will not be shared with third parties.</p>
       </form>
     </div>
   </div>
@@ -462,6 +464,6 @@
   <div class="footer-copy">Partnership & Group Enquiries</div>
 </footer>
 
-<script src="main.js"></script>
+<script src="main-final.js"></script>
 </body>
 </html>
